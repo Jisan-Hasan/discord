@@ -71,11 +71,11 @@ export const MembersModal = () => {
             router.refresh();
             onOpen("members", { server: response.data });
         } catch (error) {
-            console.log(error)
-        } finally{
+            console.log(error);
+        } finally {
             setLoadingId("");
         }
-    }
+    };
 
     const onRoleChange = async (memberId: string, role: MemberRole) => {
         try {
@@ -179,7 +179,11 @@ export const MembersModal = () => {
 
                                                 <DropdownMenuSeparator />
 
-                                                <DropdownMenuItem onClick={() => onKick(member?.id)}>
+                                                <DropdownMenuItem
+                                                    onClick={() =>
+                                                        onKick(member?.id)
+                                                    }
+                                                >
                                                     <Gavel className="h-4 w-4 mr-2" />
                                                     Kick
                                                 </DropdownMenuItem>
