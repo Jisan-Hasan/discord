@@ -60,14 +60,18 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
                 )}
                 {isAdmin && (
                     <DropdownMenuItem
-                    onClick={() => onOpen("members", { server })}
-                    className=" px-3 py-2 text-sm cursor-pointer">
+                        onClick={() => onOpen("members", { server })}
+                        className=" px-3 py-2 text-sm cursor-pointer"
+                    >
                         Manage Members
                         <Users className="h-5 w-5 ml-auto" />
                     </DropdownMenuItem>
                 )}
                 {isModerator && (
-                    <DropdownMenuItem className=" px-3 py-2 text-sm cursor-pointer">
+                    <DropdownMenuItem
+                        onClick={() => onOpen("createChannel")}
+                        className=" px-3 py-2 text-sm cursor-pointer"
+                    >
                         Create Channel
                         <PlusCircle className="h-5 w-5 ml-auto" />
                     </DropdownMenuItem>
