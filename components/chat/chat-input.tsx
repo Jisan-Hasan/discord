@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Form, FormControl, FormField, FormItem } from "../ui/form";
 import { Input } from "../ui/input";
+import { EmojiPicker } from "../emoji-picker";
 
 interface ChatInputProps {
     apiUrl: string;
@@ -84,14 +85,13 @@ export const ChatInput = ({ apiUrl, query, name, type }: ChatInputProps) => {
                                         {...field}
                                     />
                                     <div className="absolute top-7 right-8">
-                                        {/* <EmojiPicker
+                                        <EmojiPicker
                                             onChange={(emoji: string) =>
                                                 field.onChange(
-                                                    `${field.value} ${emoji}`
+                                                    `${field.value}${emoji}`
                                                 )
                                             }
-                                        /> */}
-                                        <Smile />
+                                        />
                                     </div>
                                 </div>
                             </FormControl>
