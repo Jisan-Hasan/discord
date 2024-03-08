@@ -5,6 +5,7 @@ import { NextResponse } from "next/server";
 
 const MESSAGES_BATCH = 10;
 
+// get messages
 export async function GET(req: Request) {
     try {
         const profile = await currentProfile();
